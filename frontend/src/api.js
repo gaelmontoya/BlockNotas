@@ -1,6 +1,9 @@
-// src/api.js - Servicios API para backend PHP (XAMPP)
+// src/api.js - Servicios API para el backend PHP
 
-const BASE_URL = 'http://localhost/BLOCK_NOTAS_SQLITE/backend';
+// En local (XAMPP) usa la ruta de siempre. En el build de producción
+// (Netlify), CRA reemplaza process.env.REACT_APP_API_URL con el valor que
+// le hayas puesto en sus variables de entorno antes de compilar.
+const BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost/BLOCK_NOTAS_SQLITE/backend';
 
 function getToken() {
   return localStorage.getItem('bn_token');
